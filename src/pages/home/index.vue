@@ -15,7 +15,7 @@
       </view>
       <view class="home-content">
         <view v-if="current === 0">
-          <homeRecommen></homeRecommen>
+          <homeRecommend></homeRecommend>
         </view>
         <view v-if="current === 1">
           <homeCategory></homeCategory>
@@ -35,14 +35,14 @@
 import homeAlbum from "./home-album";
 import homeCategory from "./home-category";
 import homeNew from "./home-new";
-import homeRecommen from "./home-recommend";
+import homeRecommend from "./home-recommend";
 import { uniSegmentedControl } from "@dcloudio/uni-ui";
 export default {
   components: {
     homeAlbum,
     homeCategory,
     homeNew,
-    homeRecommen,
+    homeRecommend,
     uniSegmentedControl
   },
   data() {
@@ -62,24 +62,24 @@ export default {
         this.current = e.currentIndex;
       }
     }
-  },
-  onLoad() {
-    this.request({
-      url: "http://157.122.54.189:9088/image/v3/homepage/vertical",
-      data: {
-        limit: 30,
-        skip: 0,
-        order: "hot"
-      },
-      method: "GET"
-    })
-      .then(result => {
-        console.log(result);
-      })
-      .catch(err => {
-        console.log(err);
-      });
   }
+  // onLoad() {
+  //   this.request({
+  //     url: "http://157.122.54.189:9088/image/v3/homepage/vertical",
+  //     data: {
+  //       limit: 30,
+  //       skip: 0,
+  //       order: "hot"
+  //     },
+  //     method: "GET"
+  //   })
+  //     .then(result => {
+  //       console.log(result);
+  //     })
+  //     .catch(err => {
+  //       console.log(err);
+  //     });
+  // }
 };
 </script>
 

@@ -5,7 +5,13 @@
 </template>
 
 <script>
-export default {};
+export default {
+  mounted() {
+    uni.setNavigationBarTitle({
+      title: "最新"
+    });
+  }
+};
 </script>
 
 <style></style>

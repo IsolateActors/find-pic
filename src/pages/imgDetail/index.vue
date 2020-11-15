@@ -1,15 +1,13 @@
 <template>
   <view>
-    分类
+    图片详情
   </view>
 </template>
 
 <script>
 export default {
-  mounted() {
-    uni.setNavigationBarTitle({
-      title: "分类"
-    });
+  onLoad() {
+    console.log(getApp().globalData);
   }
 };
 </script>
