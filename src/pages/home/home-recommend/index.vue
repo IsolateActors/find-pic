@@ -8,8 +8,9 @@
     <!-- 推荐开始 -->
     <view class="recommend-wrap">
       <!-- :url="`/pages/album/index?id=${item.target}`" -->
+      <!-- url="/pages/album/index?id=5da537d8e7bce739db12355d" -->
       <navigator
-        url="/pages/album/index?id=5da537d8e7bce739db12355d"
+        :url="`/pages/album/index?id=${item.target}`"
         class="recommend-item"
         v-for="item in recommends"
         :key="item.id"

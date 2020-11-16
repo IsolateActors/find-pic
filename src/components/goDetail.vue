@@ -11,8 +11,8 @@ export default {
     index: Number
   },
   mounted() {
-    console.log(this.list);
-    console.log(this.index);
+    // console.log(this.list);
+    // console.log(this.index);
   },
   methods: {
     handleClick() {

@@ -1,5 +1,5 @@
 <template>
-  <view v-if="Object.keys(this.album).length !== 0">
+  <view v-if="Object.keys(album).length !== 0">
     <!-- 专辑背景 s-->
     <view class="album-bg">
       <image mode="widthFix" :src="album.cover"></image>
@@ -75,7 +75,7 @@ export default {
           // console.log(result);
 
           if (Object.keys(this.album).length === 0) {
-            this.album = result.res.album;
+            this.album = result.res.album || {};
 
             this.params.first = 0;
           }
@@ -97,7 +97,7 @@ export default {
     }
   },
   onLoad(options) {
-    console.log(options);
+    // console.log(options);
     this.id = options.id;
     // this.id = "5e59075ae7bce73965512bd6";
     this.getList();
