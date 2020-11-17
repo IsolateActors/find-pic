@@ -7,9 +7,9 @@
      -->
     <!-- 轮播图 start -->
     <view class="album-swiper">
-      <swiper autoplay indicator-dots circular>
+      <swiper class="swiper" autoplay indicator-dots circular>
         <swiper-item v-for="item in banner" :key="item.id">
-          <image :src="item.thumb"></image>
+          <image class="image" :src="item.thumb"></image>
         </swiper-item>
       </swiper>
     </view>
@@ -24,7 +24,7 @@
         :key="item.id"
       >
         <view class="album-img">
-          <image mode="aspectFill" :src="item.cover"></image>
+          <image class="image" mode="aspectFill" :src="item.cover"></image>
         </view>
         <view class="album-info">
           <view class="album-name">{{ item.name }}</view>
@@ -83,7 +83,7 @@ export default {
             this.hasMore = false;
 
             uni.showToast({
-              title: "已加载全部数据",
+              title: "无更多数据",
               icon: "none"
             });
             this.isFirstToBottom = false;
@@ -112,9 +112,9 @@ export default {
 
 <style lang="scss">
 .album-swiper {
-  swiper {
+  .swiper {
     height: 360rpx;
-    image {
+    .image {
       height: 100%;
     }
   }
@@ -130,7 +130,7 @@ export default {
     .album-img {
       flex: 1;
       padding: 10rpx;
-      image {
+      .image {
         width: 200rpx;
         height: 200rpx;
       }

@@ -25,7 +25,7 @@
       <view class="months-title">
         <view class="months-title-info">
           <view class="title-info">
-            <text>{{ months.DD }} /</text>
+            <text class="text">{{ months.DD }} /</text>
             {{ months.MM }} 月
           </view>
           <view class="months-text">{{ months.title }}</view>
@@ -53,7 +53,7 @@
     <!-- 热门 start -->
     <view class="hots-wrap">
       <view class="hots-title">
-        <text>热门</text>
+        <text class="text">热门</text>
       </view>
       <view class="hots-content">
         <view class="hot-item" v-for="(item, index) in hots" :key="item.id">
@@ -186,7 +186,7 @@ export default {
       font-size: 30rpx;
       font-weight: 600;
       .title-info {
-        text {
+        .text {
           font-size: 36rpx;
         }
       }
@@ -218,7 +218,7 @@ export default {
 .hots-wrap {
   .hots-title {
     padding: 30rpx;
-    text {
+    .text {
       border-left: 8rpx solid $color;
       font-size: 34rpx;
       font-weight: 600;

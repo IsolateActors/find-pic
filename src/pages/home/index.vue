@@ -1,5 +1,5 @@
 <template>
-  <view id="home">
+  <view class="home">
     <view class="home-tab">
       <view class="home-title">
         <view class="title-inner">
@@ -53,7 +53,7 @@ export default {
         { title: "最新" },
         { title: "专辑" }
       ],
-      current: 1
+      current: 0
     };
   },
   methods: {
@@ -84,7 +84,7 @@ export default {
 </script>
 
 <style lang="scss">
-#home {
+.home {
   .home-tab {
     .home-title {
       position: relative;
@@ -98,8 +98,6 @@ export default {
         transform: translateY(-50%);
         right: 5%;
       }
-    }
-    .home-content {
     }
   }
 }

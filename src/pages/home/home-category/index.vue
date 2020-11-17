@@ -1,15 +1,15 @@
 <template>
-  <view class="home-category">
+  <scroll-view scroll-y enable-flex class="home-category">
     <navigator
       :url="`/pages/imgCategory/index?id=${item.id}`"
       class="category-item"
       v-for="item in category"
       :key="item.id"
     >
-      <image mode="aspectFill" :src="item.cover"></image>
+      <image class="image" mode="aspectFill" :src="item.cover"></image>
       <text class="category-name">{{ item.name }}</text>
     </navigator>
-  </view>
+  </scroll-view>
 </template>
 
 <script>
@@ -32,7 +32,7 @@ export default {
         url: "http://157.122.54.189:9088/image/v1/vertical/category"
       })
         .then(result => {
-          console.log(result);
+          // console.log(result);
           this.category = result.res.category;
         })
         .catch(err => {});
@@ -43,6 +43,7 @@ export default {
 
 <style lang="scss" scoped>
 .home-category {
+  height: calc(100vh - 36px);
   display: flex;
   flex-wrap: wrap;
   .category-item {
@@ -50,7 +51,7 @@ export default {
     height: calc(750rpx / 3);
     position: relative;
     border: 4rpx solid #fff;
-    image {
+    .image {
       width: 100%;
       height: 100%;
     }

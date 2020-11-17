@@ -5,7 +5,7 @@ export default params => {
   });
 
   return new Promise((resolve, reject) => {
-    wx.request({
+    uni.request({
       ...params,
       success(res) {
         resolve(res.data);
