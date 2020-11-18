@@ -75,33 +75,22 @@
     },
     "h5" : {
         "title" : "懂你找图",
-        "devServer" : {
-            "proxy" : {
-                "/image" : {
-                    //你要跨域的域名(包含host、端口号,切记：一定要带上http头);
-                    //同一个域名只能设置一次跨域，否则重复报错！
-                    "target" : "http://157.122.54.189:9088",
-                    "changeOrigin" : true //是否跨域，设置为true;(必须)
+        // "devServer" : {
+        //     "proxy" : {
+        //         "/image" : {
+        //             //你要跨域的域名(包含host、端口号,切记：一定要带上http头);
+        //             //同一个域名只能设置一次跨域，否则重复报错！
+        //             "target" : "http://157.122.54.189:9088",
+        //             "changeOrigin" : true, //是否跨域，设置为true;(必须)
 
-                    // 会把程序中/api开头的路径替换成:http://127.0.0.1:8099/api
-                    // "pathRewrite" : {
-                    //     "^/api" : "" // 设置/api路径重定向为根目录"/api";
-                    // }
-                },
-				"/videoimg" : {
-				    //你要跨域的域名(包含host、端口号,切记：一定要带上http头);
-				    //同一个域名只能设置一次跨域，否则重复报错！
-				    "target" : "http://157.122.54.189:9088",
-				    "changeOrigin" : true //是否跨域，设置为true;(必须)
-				
-				    // 会把程序中/api开头的路径替换成:http://127.0.0.1:8099/api
-				    // "pathRewrite" : {
-				    //     "^/api" : "" // 设置/api路径重定向为根目录"/api";
-				    // }
-				}
-            },
-            "https" : false
-        },
+        //             // 会把程序中/api开头的路径替换成:http://127.0.0.1:8099/api
+        //             "pathRewrite" : {
+        //                 "^/image" : "/image" // 设置/api路径重定向为根目录"/api";
+        //             }
+        //         }
+        //     },
+        //     "https" : false
+        // },
         "router" : {
             "mode" : "hash",
             "base" : "./"
