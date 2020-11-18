@@ -10,7 +10,7 @@
       <!-- :url="`/pages/album/index?id=${item.target}`" -->
       <!-- url="/pages/album/index?id=5da537d8e7bce739db12355d" -->
       <navigator
-        :url="`/pages/album/index?id=${item.target}`"
+        url="/pages/album/index?id=5d5f8e45e7bce75ae7fb8278"
         class="recommend-item"
         v-for="item in recommends"
         :key="item.id"
@@ -30,7 +30,7 @@
           </view>
           <view class="months-text">{{ months.title }}</view>
         </view>
-        <view class="months-more">更多></view>
+        <!-- <view class="months-more">更多></view> -->
       </view>
       <view class="months-content">
         <view
@@ -100,7 +100,7 @@ export default {
         method: "GET"
       })
         .then(result => {
-          console.log(result);
+          // console.log(result);
 
           // 第一次请求
           if (this.recommends.length === 0) {

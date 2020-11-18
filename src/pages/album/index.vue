@@ -131,12 +131,13 @@ export default {
     bottom: 0;
     color: #fff;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     height: 80rpx;
     // line-height: 80rpx;
     align-items: center;
     .album-name {
       font-size: 40rpx;
+	  margin-left: 40rpx;
     }
 
     .album-btn {
@@ -146,6 +147,7 @@ export default {
       text-align: center;
       line-height: 60rpx;
       border-radius: 10rpx;
+	  margin-right: 40rpx;
     }
   }
 }

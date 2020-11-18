@@ -34,7 +34,7 @@
     <!-- 点赞收藏 e -->
 
     <!-- 专辑 s -->
-    <view class="album-wrap" v-if="album.length > 0">
+    <view class="album-wrap" v-if="album.length">
       <view class="album-title">相关</view>
       <view class="album-list">
         <view class="album-item" v-for="item in album" :key="item.id">
@@ -188,7 +188,7 @@ export default {
       })
         .then(result => {
           // console.log(result);
-          this.album = result.res.album;
+          this.album = result.res.album || [];
           this.hot = result.res.hot;
           this.comment = result.res.comment;
         })

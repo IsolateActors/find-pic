@@ -38,7 +38,7 @@ export default {
       // 先判断距离合法，后判断方向
       if (
         Math.abs(endX - this.startX) > 10 &&
-        Math.abs(endY - this.startY) < 10
+        Math.abs(endY - this.startY) < 20
       ) {
         // 方向
         direction = endX - this.startX > 0 ? "right" : "left";

@@ -11,7 +11,7 @@
             active-color="#d4237a"
           ></uni-segmented-control>
         </view>
-        <view class="iconfont iconsearch"></view>
+        <!-- <view class="iconfont iconsearch"></view> -->
       </view>
       <view class="home-content">
         <view v-if="current === 0">
@@ -21,9 +21,6 @@
           <homeCategory></homeCategory>
         </view>
         <view v-if="current === 2">
-          <homeNew></homeNew>
-        </view>
-        <view v-if="current === 3">
           <homeAlbum></homeAlbum>
         </view>
       </view>
@@ -34,25 +31,18 @@
 <script>
 import homeAlbum from "./home-album";
 import homeCategory from "./home-category";
-import homeNew from "./home-new";
 import homeRecommend from "./home-recommend";
 import { uniSegmentedControl } from "@dcloudio/uni-ui";
 export default {
   components: {
     homeAlbum,
     homeCategory,
-    homeNew,
     homeRecommend,
     uniSegmentedControl
   },
   data() {
     return {
-      items: [
-        { title: "推荐" },
-        { title: "分类" },
-        { title: "最新" },
-        { title: "专辑" }
-      ],
+      items: [{ title: "推荐" }, { title: "分类" }, { title: "专辑" }],
       current: 0
     };
   },

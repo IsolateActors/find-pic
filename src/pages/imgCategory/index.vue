@@ -15,18 +15,19 @@
       <scroll-view
         scroll-y
         enable-flex
-        class="category-content"
         @scrolltolower="handleScrollToLower"
       >
-        <view
-          class="cate-item"
-          v-for="(item, index) in vertical"
-          :key="item.id"
-        >
-          <go-detail :list="vertical" :index="index">
-            <image mode="widthFix" :src="item.thumb"></image>
-          </go-detail>
-        </view>
+	  <view class="category-content">
+		  <view
+		    class="cate-item"
+		    v-for="(item, index) in vertical"
+		    :key="item.id"
+		  >
+		    <go-detail :list="vertical" :index="index">
+		      <image mode="widthFix" :src="item.thumb"></image>
+		    </go-detail>
+		  </view>
+	  </view>
       </scroll-view>
     </view>
   </view>

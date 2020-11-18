@@ -11,7 +11,7 @@
             active-color="#d4237a"
           ></uni-segmented-control>
         </view>
-        <view class="iconfont iconsearch"></view>
+        <!-- <view class="iconfont iconsearch"></view> -->
       </view>
       <view class="video-content">
         <view v-if="current < 4">
@@ -19,9 +19,9 @@
             :urlobj="{ url: items[current].url, params: items[current].params }"
           ></video-main>
         </view>
-        <view v-if="current === 4">
+        <!-- <view v-if="current === 4">
           <video-category></video-category>
-        </view>
+        </view> -->
       </view>
     </view>
   </view>
@@ -29,13 +29,13 @@
 
 <script>
 import videoMain from "./video-main";
-import videoCategory from "./video-category";
+// import videoCategory from "./video-category";
 import { uniSegmentedControl } from "@dcloudio/uni-ui";
 export default {
   components: {
     uniSegmentedControl,
     videoMain,
-    videoCategory
+    // videoCategory
   },
   data() {
     return {
@@ -76,11 +76,11 @@ export default {
             skip: 0
           }
         },
-        {
-          title: "分类",
-          url: "/videoimg/v1/videowp/category",
-          params: {}
-        }
+        // {
+        //   title: "分类",
+        //   url: "/videoimg/v1/videowp/category",
+        //   params: {}
+        // }
       ],
       current: 0
     };
