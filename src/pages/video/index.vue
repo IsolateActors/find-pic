@@ -42,7 +42,7 @@ export default {
       items: [
         {
           title: "推荐",
-          url: "http://157.122.54.189:9088/videoimg/v1/videowp/featured",
+          url: "/videoimg/v1/videowp/featured",
           params: {
             limit: 30,
             order: "hot",
@@ -51,8 +51,7 @@ export default {
         },
         {
           title: "娱乐",
-          url:
-            "http://157.122.54.189:9088/videoimg/v1/videowp/category/59b25abbe7bce76bc834198a",
+          url: "/videoimg/v1/videowp/category/59b25abbe7bce76bc834198a",
           params: {
             limit: 30,
             order: "new",
@@ -61,7 +60,7 @@ export default {
         },
         {
           title: "最新",
-          url: "http://157.122.54.189:9088/videoimg/v1/videowp/videowp",
+          url: "/videoimg/v1/videowp/videowp",
           params: {
             limit: 30,
             order: "new",
@@ -70,7 +69,7 @@ export default {
         },
         {
           title: "热门",
-          url: "http://157.122.54.189:9088/videoimg/v1/videowp/videowp",
+          url: "/videoimg/v1/videowp/videowp",
           params: {
             limit: 30,
             order: "hot",
@@ -79,7 +78,7 @@ export default {
         },
         {
           title: "分类",
-          url: "http://157.122.54.189:9088/videoimg/v1/videowp/category",
+          url: "/videoimg/v1/videowp/category",
           params: {}
         }
       ],

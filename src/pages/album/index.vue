@@ -68,7 +68,7 @@ export default {
   methods: {
     getList() {
       this.request({
-        url: `http://157.122.54.189:9088/image/v1/wallpaper/album/${this.id}/wallpaper`,
+        url: `/image/v1/wallpaper/album/${this.id}/wallpaper`,
         data: this.params
       })
         .then(result => {

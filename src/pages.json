@@ -61,7 +61,12 @@
     "navigationBarTextStyle": "white",
     "navigationBarTitleText": "找图",
     "navigationBarBackgroundColor": "#000",
-    "backgroundColor": "#ffffff"
+    "backgroundColor": "#ffffff",
+	"h5":{
+		"titleNView": {
+			"backgroundColor": "#d52a7e"
+		}
+	}
   },
   "tabBar": {
     "color": "#7A7E83",

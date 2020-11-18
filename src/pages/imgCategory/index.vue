@@ -77,7 +77,7 @@ export default {
     },
     getList() {
       this.request({
-        url: `http://157.122.54.189:9088/image/v1/vertical/category/${this.id}/vertical`,
+        url: `/image/v1/vertical/category/${this.id}/vertical`,
         data: this.params
       })
         .then(result => {

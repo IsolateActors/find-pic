@@ -1,9 +1,14 @@
+import config from "@/config";
+
+const baseUrl = config.baseUrl.url;
+
 export default params => {
   // 加载中
   uni.showLoading({
     title: "加载中"
   });
 
+  params.url = baseUrl + params.url;
   return new Promise((resolve, reject) => {
     uni.request({
       ...params,
