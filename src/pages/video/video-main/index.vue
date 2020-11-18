@@ -1,17 +1,14 @@
 <template>
-  <scroll-view
-    scroll-y
-    enable-flex
-    class="video-main"
-    @scrolltolower="handleScrollToLower"
-  >
-    <view
-      class="video-item"
-      v-for="item in videowp"
-      :key="item.id"
-      @click="handleVideo(item)"
-    >
-      <image mode="widthFix" :src="item.img"></image>
+  <scroll-view scroll-y enable-flex @scrolltolower="handleScrollToLower">
+    <view class="video-main">
+      <view
+        class="video-item"
+        v-for="item in videowp"
+        :key="item.id"
+        @click="handleVideo(item)"
+      >
+        <image mode="widthFix" :src="item.img"></image>
+      </view>
     </view>
   </scroll-view>
 </template>

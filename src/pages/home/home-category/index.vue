@@ -1,14 +1,16 @@
 <template>
-  <scroll-view scroll-y enable-flex class="home-category">
-    <navigator
-      :url="`/pages/imgCategory/index?id=${item.id}`"
-      class="category-item"
-      v-for="item in category"
-      :key="item.id"
-    >
-      <image class="image" mode="aspectFill" :src="item.cover"></image>
-      <text class="category-name">{{ item.name }}</text>
-    </navigator>
+  <scroll-view scroll-y enable-flex>
+    <view class="home-category">
+      <navigator
+        :url="`/pages/imgCategory/index?id=${item.id}`"
+        class="category-item"
+        v-for="item in category"
+        :key="item.id"
+      >
+        <image class="image" mode="aspectFill" :src="item.cover"></image>
+        <text class="category-name">{{ item.name }}</text>
+      </navigator>
+    </view>
   </scroll-view>
 </template>
 
@@ -46,6 +48,7 @@ export default {
   height: calc(100vh - 36px);
   display: flex;
   flex-wrap: wrap;
+
   .category-item {
     width: 33.33%;
     height: calc(750rpx / 3);
